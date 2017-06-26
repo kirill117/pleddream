@@ -1,0 +1,11 @@
+.logs
+bin
+obj
+packages
+bundles
+.bak
+.err
+.pdb
+.pidb
+.suo
+.user

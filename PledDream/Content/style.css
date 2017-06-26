@@ -1172,11 +1172,16 @@ a.date {
     }
 
     .top-menu h4 {
-	    font-size: 8px;
-	    margin: 2px 0 0 0;
+	    font-size: 7px;
+	    margin: 2px 0 0 5px;
     }
+    
+    .top-menu h4 i {
+	    font-size: 6px;
+    }
+    
     .top-menu ul li {
-        font-size:5px;
+        font-size:7px;
     }
     .top-menu a span {
 	    display:none;
@@ -1191,8 +1196,14 @@ a.date {
     }
 
     .merinos h4{
-        margin-top:30px !important;
+        margin-top:0px !important;
         margin-bottom:0;
+        font-size: 28px;
+    }
+
+
+    .nbs-flexisel-item {
+        height: 175px;
     }
 
     .merinos .content{
