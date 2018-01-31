@@ -1,13 +1,19 @@
-/*--
-	Author: W3layouts
-	Author URL: http://w3layouts.com
-	License: Creative Commons Attribution 3.0 Unported
-	License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+@font-face {
+	font-family: Monotype Corsiva; 
+	src: local("Monotype Corsiva"), 
+        url(../fonts/Monotype-Corsiva.ttf);
+}
+
+@font-face {
+	font-family: Brush Script MT; 
+	src: local("Brush Script MT"), 
+        url(../fonts/BRUSHSCI.TTF);
+}
+
 body{
 	margin:0;
 	padding:0;
-	font-family: Calibri, sans-serif;
+	font-family: sans-serif;
 	background:#fff;
 }
 body a{
@@ -27,8 +33,9 @@ ul{
 margin:0;
 padding:0;
 }
-.container{
-padding:0;
+
+.top-menu .container{
+    background-color: white;
 }
 
 .subtitle{
@@ -59,11 +66,12 @@ padding:0;
     font-family:'Brush Script MT','Raleway', sans-serif;
     font-size: 150px;
     font-weight:100;
-    /*text-shadow: #A0A0A0 2px 0px 2px, #A0A0A0 0px 2px 2px, #A0A0A0 0px -2px 2px, #A0A0A0 -2px 0px 2px;*/
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .logo p{
     font-size:60px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 .logo l{
     display:block;
@@ -95,7 +103,7 @@ padding:0;
 	font-family: 'Raleway', sans-serif;
 	color:#364356;
 	float:left;
-	font-weight:900;
+	font-weight:600;
 	margin: 2px 0 0 0;
     font-size:18px;
 }
@@ -112,6 +120,11 @@ padding:0;
 .top-menu ul li{
 	display:inline-block;
 }
+
+.top-menu ul li.new {
+    background: url('../images/new.png') no-repeat 68px 0px;
+}
+
 .top-menu ul li a{
 	text-decoration: none;
 	color: #364356;
@@ -119,7 +132,6 @@ padding:0;
 	font-size: 18px;
 	padding: 10px 0 0 0;
 	display: block;
-	font-weight: 900;
 }
 .top-menu ul li a:hover{
 	color:#FF6D6B;
@@ -167,6 +179,18 @@ padding:0;
     padding:0;
     position:relative;
 }
+
+
+.top-news {
+    text-align:center;
+    background:url(../images/bg1.jpg)  0px 0px;
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+    margin-top:30px;
+    padding: 20px;
+}
+
 .delivery p {
     font-size:20px;
     color:#fff;
@@ -180,7 +204,6 @@ padding:0;
     height:400px;
     padding: 0;
     position:relative;
-    
     background:url(../images/delivery.jpg)  0px 0px;
 }
 
@@ -319,8 +342,10 @@ video {
 }
 
 .about-info p{
-	color:#211d1d;
-	font-family: 'Lato', sans-serif;
+	/*color:#211d1d;
+	font-family: 'Lato', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
 	line-height:1.8em;
 	width: 100%;
 }
@@ -848,9 +873,14 @@ i.line{
 	border:1px solid #364356;
 	outline:none;
 }
-.contact .form input[type="text"]:hover,.contact .form textarea:hover{
-	border:1px solid #FF6D6B;
+.contact .form input[type="text"]:hover, .contact .form textarea:hover{
+	border:1px solid #0094ff;
 }
+
+.error {
+	border:1px solid #FF6D6B !important;
+}
+
 .contact .form textarea{
 	height:100px;
 	resize:none;
@@ -943,6 +973,12 @@ i.line{
 	width: 50%;
 	float: left;
 }
+
+.top-news .about-info {
+	width: 100%;
+	padding:30px;
+}
+
 .about a {
 	height: 32px;
 	bottom: -4.5%;
@@ -954,6 +990,11 @@ i.line{
 .about-info p {
 	width: 88%;
 }
+
+.top-news .about-info p {
+	width: 100%;
+}
+
 .img-desc p {
 	margin: 10px 0 10px 16px;
 	line-height: 1.8em;
@@ -967,9 +1008,6 @@ i.line{
 .caption2 {
 	width: 235px;
 	min-height: 232px;
-}
-a.date {
-	bottom: -51px;
 }
 .dmnd2 {
 	left: 91%;
@@ -1073,9 +1111,6 @@ a.date {
 	top: 21%;
 }
 
-video{
-    display:none;
-}
 
 .skill-grid1,.skill-grid2 ,.skill-grid3 {
 	width: 100%;
@@ -1238,6 +1273,11 @@ a.date {
 .about-info .content {
     font-size:7px !important;
 }
+
+.about-info a {
+    font-size:7px !important;
+}
+
 .about-skill p {
 	overflow: hidden;
 	height: 38px;

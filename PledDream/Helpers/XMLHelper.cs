@@ -26,7 +26,6 @@ namespace PledDream.Helpers
                                         Indent = true,
                                         NewLineOnAttributes = true,
                                         OmitXmlDeclaration = true
-
                                     }))
                 {
                     xmlSerializer.Serialize(xw, obj);
@@ -42,25 +41,31 @@ namespace PledDream.Helpers
             return true;
         }
 
-        public static T Get<T>() 
+        public static T Get<T>()
         {
             string fileName = typeof(T).Name;
             var filePath = $"{AppDomain.CurrentDomain.BaseDirectory}\\Data\\{fileName}.xml";
-            if (File.Exists(filePath))
+            if (!File.Exists(filePath))
             {
-                var xmlSerializer = new XmlSerializer(typeof(T), typeof(T).GetNestedTypes());
-                T result;
+                File.Create(filePath);
+            }
+            var xmlSerializer = new XmlSerializer(typeof(T), typeof(T).GetNestedTypes());
+            T result;
 
-                var xmlStr = File.ReadAllText(filePath);
+            var xmlStr = File.ReadAllText(filePath);
 
-                using (TextReader reader = new StringReader(xmlStr))
+            using (TextReader reader = new StringReader(xmlStr))
+            {
+                try
                 {
                     result = (T)xmlSerializer.Deserialize(reader);
                 }
-
-                return result;
+                catch
+                {
+                    result = Activator.CreateInstance<T>();
+                }
             }
-            throw new InvalidDataException($"Не найдена конфигурация");
+            return result;
         }
     }
 }

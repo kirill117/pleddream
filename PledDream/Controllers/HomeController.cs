@@ -11,9 +11,9 @@ namespace PledDream.Controllers
 {
     public class HomeController : Controller
     {
-        public MainViewModel model = XMLHelper.Get<MainViewModel>();
         public ActionResult Index()
         {
+            var model = XMLHelper.Get<MainViewModel>();
             //model.ContactInfo = new ContactInfo();
             //model.Colors = new List<Color>();
             //model.Colors.Add(new Color() { index = 1, amount = 1, file = "natur.jpg", name = "Натуральный" });
@@ -55,14 +55,26 @@ namespace PledDream.Controllers
         [HttpPost]
         public JsonResult SendOrder(string email, string name, string phone, string message)
         {
+            var model = XMLHelper.Get<MainViewModel>();
+            var result = 0;
             var sb = new StringBuilder();
             sb.AppendLine("Заказчик: "+ name);
             sb.AppendLine("Тел.: " + phone);
             sb.AppendLine("E-mail: " + email);
             sb.AppendLine(message);
 
-            EmailHelper.SendMail(model.ContactInfo.OrderEmail, sb.ToString());
-            return Json(new { Result = 1 });
+            var recipient = model.ContactInfo.OrderEmail;
+
+            if (EmailHelper.SendMail(recipient, sb.ToString(), "Новый заказ с сайта PledDream.ru"))
+            {
+                var orders = XMLHelper.Get<MessagesModel>();
+                if (orders.Messages == null)
+                    orders.Messages = new List<Message>();
+                orders.Messages.Add(new Message() { Date = DateTime.Now, Text = sb.ToString() });
+                XMLHelper.Save(orders);
+                result = 1;
+            }
+            return Json(new { Result = result });
         }
 
         public ActionResult About()

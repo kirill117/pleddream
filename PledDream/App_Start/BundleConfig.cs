@@ -11,7 +11,9 @@ namespace PledDream
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/responsiveslides.min.js",
                 "~/Scripts/jquery.flexisel.js",
-                "~/Scripts/jquery-{version}.js"));
+                "~/Scripts/jquery-1.8.3.min.js",
+                "~/Scripts/jquery-ui-1.8.24.min.js"
+                ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -28,6 +30,7 @@ namespace PledDream
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/style.css",
+                      "~/Content/themes/base/jquery.ui.all.css",
                       "~/Content/sticky-navigation.css"
                       ));
         }

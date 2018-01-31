@@ -10,19 +10,11 @@ namespace PledDream.Helpers
 {
     public static class EmailHelper
     {
-        public static bool SendRepairPasswordMail(string email, string password)
+        public static bool SendMail(string email, string strMessage = "", string subject = "")
         {
-            return SendMail(email, "Ваш пароль для доступа к порталу службы по работе с персоналом ЕЭК: " + password, "Восстановление пароля");
-        }
-        public static bool SendNewPasswordMail(string email, string password)
-        {
-            return SendMail(email, "Ваш пароль для доступа к порталу службы по работе с персоналом ЕЭК: " + password, "Изменение пароля");
-        }
-
-        public static bool SendMail(string email, string strMessage = "", string subject = "Новый заказ с сайта PledDream.ru")
-        {
-            //try
-            //{
+            var result = true;
+            try
+            {
                 SmtpClient client = new SmtpClient("mail.pleddream.ru", 587);
                 client.UseDefaultCredentials = false;
                 client.Credentials = new NetworkCredential("postmaster@pleddream.ru", "Zj7!vOCp");
@@ -37,27 +29,13 @@ namespace PledDream.Helpers
                 client.Send(message);
 
                 message.Dispose();
-            //}
-            //catch (Exception ex)
-            //{
-            //    return true;
-            //}
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
 
-            //using (MailMessage mm = new MailMessage("postmaster@pleddream.ru", email))
-            //{
-            //    mm.Subject = subject;
-            //    mm.Body = strMessage;
-            //    mm.IsBodyHtml = false;
-            //    using (SmtpClient sc = new SmtpClient("smtp.yandex.ru", 587))
-            //    {
-            //        sc.EnableSsl = true;
-            //        sc.DeliveryMethod = SmtpDeliveryMethod.Network;
-            //        sc.UseDefaultCredentials = false;
-            //        sc.Credentials = new NetworkCredential("testquartatest@yandex.ru", "testtestquarta");
-            //        sc.Send(mm);
-            //    }
-            //}
-            return true;
+            return result;
         }
     }
 }

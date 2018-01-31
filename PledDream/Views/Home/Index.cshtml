@@ -5,6 +5,11 @@
         $("#sendBtn").click(function() {
             SendOrder();
         });
+
+        $(".blog .date").click(function () {
+            var txt = $(this).parent().find("h4").html();
+            $("#message").val(txt);
+        });
     });
 
     function SendOrder() {
@@ -12,15 +17,70 @@
         var name = $("#name").val().trim();
         var phone = $("#phone").val().trim();
         var message = $("#message").val().trim();
+
+        if (name.length == 0) {
+            $("#name").addClass("error").focus();
+            return;
+        }
+        if (phone.length == 0) {
+            $("#phone").addClass("error").focus();
+            return;
+        }
+        if (email.length == 0) {
+            $("#address").addClass("error").focus();
+            return;
+        }
+        if (message.length == 0) {
+            $("#message").addClass("error").focus();
+            return;
+        }
+
+        $("#address").removeClass("error");
+        $("#name").removeClass("error");
+        $("#phone").removeClass("error");
+        $("#message").removeClass("error");
+
+        var text_result = '';
+
         $.ajax({
             type: 'POST',
             url: '/Home/SendOrder',
             data: { email, name, phone, message},
             dataType: 'json',
-            success: function(response) {
-                alert("Ваш заказ отправлен");
+            async: false,
+            success: function (response) {
+                if (response.Result == 1) 
+                    text_result = "Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.";
+                else
+                    text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
+            },
+            error: function () {
+                text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
             }
         });
+
+        if (text_result.length > 0) {
+            $("#dialogContainer").html(text_result);
+            $("#dialogContainer").dialog({
+                width: 350,
+                height: 250,
+                modal: true,
+                title: "Pled Dream",
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                show: {
+                    effect: "fade",
+                    duration: 200
+                },
+                hide: {
+                    effect: "fade",
+                    duration: 200
+                }
+            });
+        }
     }
 </script>
 
@@ -38,10 +98,11 @@
 						    <li><a class="scroll" href="#colors">Цвета</a></li>
 						    <li><a class="scroll" href="#blog">Цены</a></li>
 						    <li><a class="scroll" href="#accessories">Аксессуары</a></li>
+                            <li class="new"><a href="http://pryazha.pleddream.ru">Пряжа</a></li>
 						    <li><a class="scroll" href="#footer">Контакты</a></li>
-						    <a href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
-						    <a href="#"><span class="img2"> </span></a>
-						    <a href="#"><span class="img3"> </span></a>				 
+						    <a class="social" href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
+						    <a class="social" href="#"><span class="img2"> </span></a>
+						    <a class="social" href="#"><span class="img3"> </span></a>				 
 						    <div class="clearfix"></div>
 						    </ul>
 					     <div class="clearfix"></div>
@@ -62,6 +123,44 @@
     </div>
 <!---->
     <section id="main">
+        <div class="top-news">
+            <div class="container">
+                <div class="about-info">
+                    <h4>Новости</h4>
+                    <label></label>
+                    @*<p class="subtitle">
+			            С Новым годом и Рождеством! <br/>
+  			            Счастья, здоровья и удачи
+   			            всем в наступившем году!
+		            </p>
+                    <p class="content">
+                         
+                    </p>
+                    <div class="blog-img">
+                        <img src="~/images/newYear.jpg" style="max-width:300px;" />
+                    </div>
+                    <br />*@
+
+                    <label></label>
+                    <p class="subtitle">22 января 2018</p>
+                    <p class="content">
+                        В этом году мы планируем расширить линейку аксессуаров ручной работы из шерсти мериноса , а также перуанской шерсти (ожидаются новинки)
+                        Информацию о них будем регулярно размещать на нашем сайте.
+                        Заглядывайте к нам в гости - будем рады.
+                    </p>
+                    <br />
+
+                    <label></label>
+                    <p class="subtitle">01 ноября 2017</p>
+                    <p class="content">
+                        Теперь Вы можете приобрести в нашем магазине не только изделия из мериноса.
+                        Ассортимент магазина пополнили: трикотажная пряжа Biskvit и YarnArt , а также плюшевая пряжа Суфле
+                    </p>
+                    <a style="font-size: 28px;" href="http://pryazha.pleddream.ru">pryazha.pleddream.ru</a>
+
+                </div>
+            </div>
+        </div>
         <div class="about" id="about">
             <div class="container">
                 <div class="about-grids">
@@ -311,7 +410,7 @@
                                         Плед из мериноса будет идеально смотреться как в  классическом, так и в стилях прованс, поп-арт или хайтек.  Надо лишь правильно подобрать оттенок и стиль вязки пледа…
                                     </p>
                                     <div class="icons">
-                                        10200 руб.
+                                        10400 руб.
                                     </div>
                                     <a class="date" href="#contact" title="">Заказать</a>
                                 </div>
@@ -331,7 +430,7 @@
                                         В этом  наш плед королевского размера просто незаменим. Сделайте этот шикарный подарок на свадьбу друзьям, на юбилей родителям или просто побалуйте себя любимых…
                                     </p>
                                     <div class="icons">
-                                        12500 руб.
+                                        13000 руб.
                                     </div>
                                     <a class="date" href="#contact" title="">Заказать</a>
                                 </div>
@@ -467,7 +566,7 @@
                                     <img src="images/items/dog_home.jpg" alt="" class="img-responsive" />
                                 </div>
                                 <div class="img-desc">
-                                    <h4>Лежанки для кошек и собак</h4>
+                                    <h4>Лежанка для кошек и собак</h4>
                                     <span></span>
                                     <p>
                                         Лежанка  для кошек и маленьких собачек выполнена из толстой пряжи мериноса. 
@@ -501,7 +600,46 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-6">
+                            <div class="item-container">
+                                <div class="blog-img">
+                                    <img src="~/images/items/scarf_big.jpg" alt="" class="img-responsive" />
+                                </div>
+                                <div class="img-desc">
+                                    <h4>Большой шарф</h4>
+                                    <span></span>
+                                    <p>
+                                        Модный и стильный шарф для любой непогоды.
+                                        В наших широтах без такого уютного аксессуара не обойтись.
+                                        Шарф из 100% мериноса, ручная вязка. Общая длина 180см. 
+                                    </p>
+                                    <div class="icons">
+                                        3000 руб.
+                                    </div>
+                                    <a class="date" href="#contact" title="">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="item-container">
+                                <div class="blog-img">
+                                    <img src="~/images/items/pillow_h.jpg" alt="" class="img-responsive" />
+                                </div>
+                                <div class="img-desc">
+                                    <h4>Шапка Хельсинки с помпоном из меха</h4>
+                                    <span></span>
+                                    <p>
+                                        К излюбленной классической модели мы решили добавить помпон из натурального меха.
+                                        Маленькое обновление для тех, кто любит разнообразие.
+                                    </p>
+                                    <div class="icons">
+                                        2300 руб.
+                                    </div>
+                                    <a class="date" href="#contact" title="">Заказать</a>
+                                </div>
+                            </div>
+                        </div>                    </div>
                 </div>
 
                 <div class="contact text-center" id="contact">
@@ -523,8 +661,8 @@
                             <label></label>
                             <p class="subtitle">Оплата доставки осуществляется наличными курьеру при получении товара</p>
                             <p>Самовывоз (г.Москва, ул.Исаковского) - бесплатно</p>
-                            <p>Доставка курьером по Вашему адресу в пределах МКАД (в течение 1-3 дней) - 400р</p>
-                            <p>Доставка курьером по Вашему адресу за МКАД до 10 км (в течение 1-3 дней) - 600р</p>
+                            <p>Доставка курьером по Вашему адресу в пределах МКАД (в течение 1-3 дней) - 500р</p>
+                            <p>Доставка курьером по Вашему адресу за МКАД до 10 км (в течение 1-3 дней) - 700р</p>
                             <p>Доставка по России курьерской службой - в зависимости от удаленности 500-1500р</p>
                             <p>Доставка по миру - в зависимости от удаленности 1500-6000р</p>
                     </div>
@@ -556,9 +694,10 @@
                             <b>ПОДПИШИТЕСЬ НА НОВОСТИ</b>
                         </div>
                     </div>
-                    <p class="copyright">©2017 «Pled Dream»</p>
+                    <p class="copyright">©@(DateTime.Now.Year.ToString()) «Pled Dream»</p>
                 </div>
 
                 <!---->
     </section>	
 
+<div id="dialogContainer" style="display:none;"></div>

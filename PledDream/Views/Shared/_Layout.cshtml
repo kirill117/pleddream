@@ -12,10 +12,14 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    <!---- start-smoth-scrolling---->
+    
+    <!---- Happy New Year---->
+    <script type="text/javascript" language="JavaScript" src="~/Scripts/snow.js"></script>
 
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
+
+            //$(document).snowfall({ image: "images/snow/snow3.png", minSize: 10, maxSize: 20, maxSpeed: 0.5 });
 
             $(".logo").height($(".header").height());
 
@@ -101,7 +105,6 @@ $(function() {
 </head>
 <body>
     @RenderBody()
-
     @RenderSection("scripts", required: false)
 </body>
 </html>
