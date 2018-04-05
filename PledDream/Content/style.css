@@ -34,6 +34,32 @@ margin:0;
 padding:0;
 }
 
+/*******  loader ***********/
+
+.loading {
+ background-color: #eee;
+ background-image: url('loading.gif');
+ background-position: center center;
+ background-repeat: no-repeat;
+ opacity: 1;
+}
+.loading * {
+ opacity: .8;
+}
+
+/*.loaderArea {
+  background: linear-gradient(90deg, #FF4E50 10%, #F9D423 90%);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;*/
+}
+
+/*******  end loader ***********/
+
 .top-menu .container{
     background-color: white;
 }
@@ -866,14 +892,18 @@ i.line{
 	margin:2em auto;
 	width:30%;
 }
-.contact .form input[type="text"],.contact .form textarea{
+.contact .form input[type="text"],
+.contact .form input[type="email"],
+.contact .form textarea{
 	width:100%;
 	padding:5px;
 	margin-bottom:1.2em;
 	border:1px solid #364356;
 	outline:none;
 }
-.contact .form input[type="text"]:hover, .contact .form textarea:hover{
+.contact .form input[type="text"]:hover, 
+.contact .form input[type="email"]:hover, 
+.contact .form textarea:hover{
 	border:1px solid #0094ff;
 }
 

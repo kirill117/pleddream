@@ -12,6 +12,17 @@
         });
     });
 
+    function ToggleLoader(if_show)
+    {
+        if (if_show) {
+            $(".loaderArea").addClass('loading');
+        }
+        else {
+            $(".loaderArea").removeClass('loading');
+        }
+
+    }
+
     function SendOrder() {
         var email = $("#address").val().trim();
         var name = $("#name").val().trim();
@@ -53,6 +64,10 @@
                     text_result = "Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.";
                 else
                     text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
+
+                try {
+                    yaCounter44276064.reachGoal('ORDER');
+                } catch (e) { }
             },
             error: function () {
                 text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
@@ -83,29 +98,27 @@
         }
     }
 </script>
-
     <div id="demo_top_wrapper">
 	     <div id="sticky_navigation_wrapper">
 		     <div id="sticky_navigation">
 			      <div class="top-menu">
 				     <div class="container">
-						    <a href="#home"><h4>+7 (925) 187-19-67 <br /><i style="font-weight:400;">пн-сб c 11:00 до 21:00</i></h4></a>
-						    <span class="menu"> </span>
-						    <ul>
-						    <li><a class="scroll" href="#about">О нас</a></li>
-						    <li><a class="scroll" href="#merinos">О мериносе</a></li>
-						    <!--<li><a class="scroll" href="#gallery">Галлерея</a></li>-->
-						    <li><a class="scroll" href="#colors">Цвета</a></li>
-						    <li><a class="scroll" href="#blog">Цены</a></li>
-						    <li><a class="scroll" href="#accessories">Аксессуары</a></li>
-                            <li class="new"><a href="http://pryazha.pleddream.ru">Пряжа</a></li>
-						    <li><a class="scroll" href="#footer">Контакты</a></li>
-						    <a class="social" href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
-						    <a class="social" href="#"><span class="img2"> </span></a>
-						    <a class="social" href="#"><span class="img3"> </span></a>				 
-						    <div class="clearfix"></div>
-						    </ul>
-					     <div class="clearfix"></div>
+					    <a href="#home"><h4>+7 (925) 187-19-67 <br /><i style="font-weight:400;">пн-сб c 11:00 до 21:00</i></h4></a>
+					    <span class="menu"></span>
+                     <ul>
+                         <li><a class="scroll" href="#about">О нас</a></li>
+                         <li><a class="scroll" href="#merinos">О мериносе</a></li>
+                         <!--<li><a class="scroll" href="#gallery">Галлерея</a></li>-->
+                         <li><a class="scroll" href="#colors">Цвета</a></li>
+                         <li><a class="scroll" href="#blog">Цены</a></li>
+                         <li><a class="scroll" href="#accessories">Аксессуары</a></li>
+                         <li class="new"><a href="http://pryazha.pleddream.ru">Пряжа</a></li>
+                         <li><a class="scroll" href="#footer">Контакты</a></li>
+                         <a class="social" href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
+                         <a class="social" href="#"><span class="img2"> </span></a>
+                         <a class="social" href="#"><span class="img3"> </span></a>
+                     </ul>
+					    <div class="clearfix"></div>
 				     </div>
 			      </div>
 		     </div>
@@ -639,7 +652,8 @@
                                     <a class="date" href="#contact" title="">Заказать</a>
                                 </div>
                             </div>
-                        </div>                    </div>
+                        </div>                    
+                    </div>
                 </div>
 
                 <div class="contact text-center" id="contact">
@@ -649,7 +663,7 @@
                     <div id="mail" class="form">
                         <input id="name" type="text" placeholder="Ваше имя" required />
                         <input id="phone" type="text" placeholder="Телефон" required />
-                        <input id="address" type="text" placeholder="E-mail" required />
+                        <input id="address" type="email" placeholder="E-mail" required />
                         <textarea id="message" placeholder="Комментарий"></textarea>
                         <input type="button" id="sendBtn" class="btn btn-success" value="Заказать" />
                     </div>
