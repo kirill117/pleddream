@@ -11,8 +11,8 @@ namespace PledDream
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/responsiveslides.min.js",
                 "~/Scripts/jquery.flexisel.js",
-                "~/Scripts/jquery-1.8.3.min.js",
-                "~/Scripts/jquery-ui-1.8.24.min.js"
+                "~/Scripts/jquery-1.10.2.min.js",
+                "~/Scripts/jquery-ui.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(

@@ -51,14 +51,14 @@
         $("#phone").removeClass("error");
         $("#message").removeClass("error");
 
-        var text_result = '';
+        var text_result = 'Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.';
 
         $.ajax({
             type: 'POST',
             url: '/Home/SendOrder',
             data: { email, name, phone, message},
             dataType: 'json',
-            async: false,
+            async: true,
             success: function (response) {
                 if (response.Result == 1) 
                     text_result = "Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.";
@@ -93,7 +93,8 @@
                 hide: {
                     effect: "fade",
                     duration: 200
-                }
+                },
+                open: function() { $(".ui-dialog-titlebar-close").hide(); }
             });
         }
     }

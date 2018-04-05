@@ -65,8 +65,7 @@ namespace PledDream.Controllers
 
             var recipient = model.ContactInfo.OrderEmail;
 
-            //if (EmailHelper.SendMail(recipient, sb.ToString(), "Новый заказ с сайта PledDream.ru"))
-            System.Threading.Thread.Sleep(4000);
+            if (EmailHelper.SendMail(recipient, sb.ToString(), "Новый заказ с сайта PledDream.ru"))
             {
                 var orders = XMLHelper.Get<MessagesModel>();
                 if (orders.Messages == null)
