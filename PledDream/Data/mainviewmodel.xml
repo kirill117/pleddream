@@ -183,5 +183,42 @@
       <file>black.jpg</file>
       <amount>0</amount>
     </Color>
+
+    <Color>
+      <index>31</index>
+      <name>Белый снег</name>
+      <file>white.jpg</file>
+      <amount>1</amount>
+    </Color>
+    <Color>
+      <index>32</index>
+      <name>Фисташковое мороженое</name>
+      <file>fistashka.jpg</file>
+      <amount>1</amount>
+    </Color>
+    <Color>
+      <index>33</index>
+      <name>Красный мак</name>
+      <file>red.jpg</file>
+      <amount>1</amount>
+    </Color>
+    <Color>
+      <index>34</index>
+      <name>Олива</name>
+      <file>olive.jpg</file>
+      <amount>1</amount>
+    </Color>
+    <Color>
+      <index>35</index>
+      <name>Персик</name>
+      <file>peach.jpg</file>
+      <amount>1</amount>
+    </Color>
+    <Color>
+      <index>36</index>
+      <name>Сиреневый туман</name>
+      <file>fog.jpg</file>
+      <amount>1</amount>
+    </Color>
   </Colors>
 </MainViewModel>

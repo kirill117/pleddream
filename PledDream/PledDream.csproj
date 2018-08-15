@@ -316,6 +316,8 @@
     <Content Include="images\colors\cornflower.JPG" />
     <Content Include="images\colors\cream.JPG" />
     <Content Include="images\colors\dirt_rose.JPG" />
+    <Content Include="images\colors\fistashka.jpg" />
+    <Content Include="images\colors\fog.jpg" />
     <Content Include="images\colors\grafit.JPG" />
     <Content Include="images\colors\grass.JPG" />
     <Content Include="images\colors\green.JPG" />
@@ -329,11 +331,15 @@
     <Content Include="images\colors\mustard.JPG" />
     <Content Include="images\colors\natur.JPG" />
     <Content Include="images\colors\ocean.JPG" />
+    <Content Include="images\colors\olive.jpg" />
+    <Content Include="images\colors\peach.jpg" />
     <Content Include="images\colors\plum.JPG" />
     <Content Include="images\colors\pudra.JPG" />
+    <Content Include="images\colors\red.jpg" />
     <Content Include="images\colors\sand.JPG" />
     <Content Include="images\colors\sea.JPG" />
     <Content Include="images\colors\turquoise.JPG" />
+    <Content Include="images\colors\white.jpg" />
     <Content Include="images\delivery.jpg" />
     <Content Include="images\dmnd.png" />
     <Content Include="images\dmnd2.png" />

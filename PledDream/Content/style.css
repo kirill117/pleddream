@@ -151,6 +151,10 @@ padding:0;
     background: url('../images/new.png') no-repeat 68px 0px;
 }
 
+.colors .new {
+    background: url('../images/new.png') no-repeat 138px 0px;
+}
+
 .top-menu ul li a{
 	text-decoration: none;
 	color: #364356;
@@ -286,6 +290,8 @@ padding:0;
     display:inline-block;
     margin:10px 15px 5px 0px;
     padding-bottom:15px;
+    vertical-align: top;
+    max-width: 150px;
 }
 
 h3{
