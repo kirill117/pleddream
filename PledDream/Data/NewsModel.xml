@@ -1,0 +1,12 @@
+<NewsModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NewsList>
+    <News>
+      <Date>15.08.2018</Date>
+      <Title></Title>
+      <Text>
+        У нас появились новинки в палитре пледов: Красный мак, Сиреневый туман, Фисташковое мороженое, Олива, Персик и Белый снег!
+        Выбирайте с удовольствием!
+      </Text>
+    </News>
+  </NewsList>
+</NewsModel>

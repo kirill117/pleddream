@@ -1,4 +1,7 @@
+@using PledDream.Helpers
+
 @model PledDream.Models.MainViewModel
+
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -154,14 +157,15 @@
                         <img src="~/images/newYear.jpg" style="max-width:300px;" />
                     </div>
                     <br />*@
-
-                    <label></label>
-                    <p class="subtitle">15 августа 2018</p>
+                    @foreach (var news in MainHelper.GetNews())
+                    {
+                    <label>@news.Title</label>
+                    <p class="subtitle">@news.DateNews.ToLongDateString()</p>
                     <p class="content">
-                        У нас появились новинки в палитре пледов: Красный мак, Сиреневый туман, Фисташковое мороженое, Олива, Персик и Белый снег!
-                        Выбирайте с удовольствием!                    </p>
+                        @news.Text               
+                    </p>
                     <br />
-
+                    }
                     <label></label>
                     <p class="subtitle">01 ноября 2017</p>
                     <p class="content">
