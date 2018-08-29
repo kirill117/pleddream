@@ -1,5 +1,6 @@
 <NewsModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <NewsList>
+    
     <News>
       <Date>15.08.2018</Date>
       <Title></Title>
@@ -8,5 +9,6 @@
         Выбирайте с удовольствием!
       </Text>
     </News>
+    
   </NewsList>
 </NewsModel>
