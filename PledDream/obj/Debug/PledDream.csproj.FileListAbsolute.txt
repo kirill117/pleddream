@@ -117,7 +117,6 @@ D:\Template\PD\PledDream\obj\Debug\PledDream.pdb
 D:\Template\PD\PledDream\bin\System.Web.Razor.dll
 D:\Template\PD\PledDream\bin\System.Web.Razor.xml
 D:\Template\PD\PledDream\obj\Debug\PledDream.csprojResolveAssemblyReference.cache
-C:\TEMPLATES\PD\PledDream\obj\Debug\PledDream.csprojResolveAssemblyReference.cache
 C:\TEMPLATES\PD\PledDream\bin\ApplicationInsights.config
 C:\TEMPLATES\PD\PledDream\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\TEMPLATES\PD\PledDream\bin\roslyn\Microsoft.VisualBasic.Core.targets

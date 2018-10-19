@@ -365,6 +365,7 @@
     <Content Include="images\items\cardigan.jpg" />
     <Content Include="images\items\dog_home.jpg" />
     <Content Include="images\items\hat.jpg" />
+    <Content Include="images\items\hat_1.jpg" />
     <Content Include="images\items\medium_130x170.jpg" />
     <Content Include="images\items\pillow.jpg" />
     <Content Include="images\items\pillow_h.jpg" />
@@ -489,7 +490,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>17760</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:17760/</IISUrl>
+          <IISUrl>http://localhost:55668/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

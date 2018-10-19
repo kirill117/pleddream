@@ -210,6 +210,18 @@ padding:0;
     position:relative;
 }
 
+.old-price {
+    text-decoration:line-through;
+    float: left;
+    color: rgba(0, 0, 0, 0.4);
+    font-size:24px;
+    margin-right: 10px;
+}
+
+.new-price {
+    color:#FF6D6B;
+    font-size:26px !important;
+}
 
 .top-news {
     text-align:center;
@@ -1177,7 +1189,7 @@ a.date {
 }
 
 .img-desc .icons{
-	font-size:18px;
+	/*font-size:18px;*/
 }
 
 .delivery p {
