@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using PledDream.Helpers
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,10 +25,10 @@
 
             $(".logo").height($(".header").height());
 
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-            });
+            //$(".scroll").click(function (event) {
+            //    event.preventDefault();
+            //    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            //});
 
             $("#flexiselDemo1").flexisel({
                 visibleItems: 2,
@@ -43,28 +45,28 @@
     <script>
 $(function() {
 
-	// grab the initial top offset of the navigation
-	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+	//// grab the initial top offset of the navigation
+	//var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
 
-	// our function that decides weather the navigation bar should have "fixed" css position or not.
-	var sticky_navigation = function(){
-		var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+	//// our function that decides weather the navigation bar should have "fixed" css position or not.
+	//var sticky_navigation = function(){
+	//	var scroll_top = $(window).scrollTop(); // our current vertical position from the top
 
-		// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
-		if (scroll_top > sticky_navigation_offset_top) {
-			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
-		} else {
-			$('#sticky_navigation').css({ 'position': 'relative' });
-		}
-	};
+	//	// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+	//	if (scroll_top > sticky_navigation_offset_top) {
+	//		$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+	//	} else {
+	//		$('#sticky_navigation').css({ 'position': 'relative' });
+	//	}
+	//};
 
-	// run our function on load
-	sticky_navigation();
+	//// run our function on load
+	//sticky_navigation();
 
-	// and run it again every time you scroll
-	$(window).scroll(function() {
-		 sticky_navigation();
-	});
+	//// and run it again every time you scroll
+	//$(window).scroll(function() {
+	//	 sticky_navigation();
+	//});
 
 	// NOT required:
 	// for this demo disable all links that point to "#"
@@ -104,7 +106,121 @@ $(function() {
 <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+    @*<div id="sticky_navigation_wrapper">
+        <div id="sticky_navigation">
+            <div class="top-menu">
+                <div role="navigation" class="navbar-collapse navbar">
+                    <div class="navbar-left">
+                        <a href="~/home/index"><h4>@MainHelper.GetMainModel().ContactInfo.Phone <br /><i style="font-weight:400;">пн-сб c 11:00 до 21:00</i></h4></a>
+                        <span class="menu"></span>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="scroll" href="~/home/index#about">О нас</a></li>
+                        <li><a class="scroll" href="~/home/index#merinos">О мериносе</a></li>
+                        <li><a class="scroll" href="~/home/index#gallery">Галерея</a></li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Каталог <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/home/Pleds">Пледы</a></li>
+                                <li><a href="~/home/Caps">Шапки из перуанской шерсти</a></li>
+                                <li><a href="~/home/Accessories">Аксессуары и шапки из мериноса</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="scroll" href="#delivery">Доставка</a></li>
+                        <li class="new"><a href="http://pryazha.pleddream.ru">Пряжа</a></li>
+                        <li><a class="scroll" href="#footer">Контакты</a></li>
+
+                        <a class="social" href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
+                        <a class="social" href="#"><span class="img2"> </span></a>
+                        <a class="social" href="#"><span class="img3"> </span></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <nav class="navbar navbar-default">
+        <!-- Контейнер (определяет ширину Navbar) -->
+        <div class="container-fluid top-menu">
+            <!-- Заголовок -->
+            <div class="navbar-header">
+                <!-- Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar) -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Бренд или название сайта (отображается в левой части меню) -->
+                <a href="~/home/index"><h4>@MainHelper.GetMainModel().ContactInfo.Phone <br /><i style="font-weight:400;">пн-сб c 11:00 до 21:00</i></h4></a>
+            </div>
+            <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
+            <div class="collapse navbar-collapse" id="navbar-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="scroll" href="~/home/index#about">О нас</a></li>
+                    <li><a class="scroll" href="~/home/index#merinos">О мериносе</a></li>
+                    <li><a class="scroll" href="~/home/index#gallery">Галерея</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Каталог <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/home/Pleds">Пледы</a></li>
+                            <li><a href="~/home/Caps">Шапки из перуанской шерсти</a></li>
+                            <li><a href="~/home/Accessories">Аксессуары и шапки из мериноса</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="scroll" href="#delivery">Доставка</a></li>
+                    <li class="new"><a href="http://pryazha.pleddream.ru">Пряжа</a></li>
+                    <li><a class="scroll" href="#footer">Контакты</a></li>
+
+                    <a class="social" href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
+                    <a class="social" href="#"><span class="img2"> </span></a>
+                    <a class="social" href="#"><span class="img3"> </span></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
     @RenderBody()
+
+    <div class="delivery" id="delivery">
+        <div class="delivery-container">
+            <h3>Способы доставки</h3>
+            <label></label>
+            <p class="subtitle">Оплата доставки осуществляется наличными курьеру при получении товара</p>
+            <p>Самовывоз (г.Москва, ул.Исаковского) - бесплатно</p>
+            <p>Доставка курьером по Вашему адресу в пределах МКАД (в течение 1-3 дней) - 500р</p>
+            <p>Доставка курьером по Вашему адресу за МКАД до 10 км (в течение 1-3 дней) - 700р</p>
+            <p>Доставка по России курьерской службой - в зависимости от удаленности 500-1500р</p>
+            <p>Доставка по миру - в зависимости от удаленности 1500-6000р</p>
+        </div>
+    </div>
+    <!---->
+    <div class="row fotter" id="footer">
+        <div class="scale"></div>
+        <div class="col-md-10 container">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 footer-info">
+                <b>Контакты</b>
+                <p>
+                    @MainHelper.GetMainModel().ContactInfo.OrderEmail<br />
+                    Тел. @MainHelper.GetMainModel().ContactInfo.Phone<br />
+                </p>
+            </div>            
+            <div class="col-md-2 footer-info">
+                <b>Адрес</b>
+                <p>Россия, г.Москва</p>
+            </div>
+            <div class="col-md-2 footer-info">
+                <b>Часы работы</b>
+                <p>
+                    Пн - Сб<br />
+                    11:00–21:00
+                </p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <p class="copyright">©@(DateTime.Now.Year.ToString()) «Pled Dream»</p>
+    </div>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -235,3 +235,4 @@ C:\TEMPLATES\PD\PledDream\bin\System.Web.WebPages.Razor.xml
 C:\TEMPLATES\PD\PledDream\bin\Microsoft.Web.Infrastructure.xml
 C:\TEMPLATES\PD\PledDream\obj\Debug\PledDream.dll
 C:\TEMPLATES\PD\PledDream\obj\Debug\PledDream.pdb
+C:\TEMPLATES\PD\PledDream\obj\Debug\PledDream.csprojResolveAssemblyReference.cache

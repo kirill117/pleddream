@@ -19,5 +19,10 @@ namespace PledDream.Helpers
             catch { }
             return list;
         }
+
+        public static MainViewModel GetMainModel()
+        {
+            return XMLHelper.Get<MainViewModel>();
+        }
     }
 }

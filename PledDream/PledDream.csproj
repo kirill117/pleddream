@@ -19,7 +19,7 @@
     <AssemblyName>PledDream</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -308,6 +308,7 @@
     <Content Include="images\about.JPG" />
     <Content Include="images\banner.jpg" />
     <Content Include="images\banner1.jpg" />
+    <Content Include="images\banner2.jpg" />
     <Content Include="images\bg1.jpg" />
     <Content Include="images\bg2.jpg" />
     <Content Include="images\colors\black.JPG" />
@@ -346,6 +347,35 @@
     <Content Include="images\colors\sea.JPG" />
     <Content Include="images\colors\turquoise.JPG" />
     <Content Include="images\colors\white.jpg" />
+    <Content Include="images\colors_peru\8001.jpg" />
+    <Content Include="images\colors_peru\8002.jpg" />
+    <Content Include="images\colors_peru\8003.jpg" />
+    <Content Include="images\colors_peru\8004.jpg" />
+    <Content Include="images\colors_peru\8005.jpg" />
+    <Content Include="images\colors_peru\8006.jpg" />
+    <Content Include="images\colors_peru\8010.jpg" />
+    <Content Include="images\colors_peru\8031.jpg" />
+    <Content Include="images\colors_peru\8033.jpg" />
+    <Content Include="images\colors_peru\8035.jpg" />
+    <Content Include="images\colors_peru\8036.jpg" />
+    <Content Include="images\colors_peru\8042.jpg" />
+    <Content Include="images\colors_peru\8044.jpg" />
+    <Content Include="images\colors_peru\8045.jpg" />
+    <Content Include="images\colors_peru\8046.jpg" />
+    <Content Include="images\colors_peru\8050.jpg" />
+    <Content Include="images\colors_peru\8053.jpg" />
+    <Content Include="images\colors_peru\8054.jpg" />
+    <Content Include="images\colors_peru\8055.jpg" />
+    <Content Include="images\colors_peru\8056.jpg" />
+    <Content Include="images\colors_peru\8057.jpg" />
+    <Content Include="images\colors_peru\8058.jpg" />
+    <Content Include="images\colors_peru\8059.jpg" />
+    <Content Include="images\colors_peru\8060.jpg" />
+    <Content Include="images\colors_peru\8061.jpg" />
+    <Content Include="images\colors_peru\8062.jpg" />
+    <Content Include="images\colors_peru\8063.jpg" />
+    <Content Include="images\colors_peru\8064.jpg" />
+    <Content Include="images\colors_peru\8065.jpg" />
     <Content Include="images\delivery.jpg" />
     <Content Include="images\dmnd.png" />
     <Content Include="images\dmnd2.png" />
@@ -362,10 +392,14 @@
     <Content Include="images\gifs.png" />
     <Content Include="images\items\baby_45x60.jpg" />
     <Content Include="images\items\baby_45x60_1.JPG" />
+    <Content Include="images\items\cap_beatrice.jpg" />
     <Content Include="images\items\cardigan.jpg" />
     <Content Include="images\items\dog_home.jpg" />
     <Content Include="images\items\hat.jpg" />
     <Content Include="images\items\hat_1.jpg" />
+    <Content Include="images\items\hat_Beanie.jpg" />
+    <Content Include="images\items\hat_galaxy.jpg" />
+    <Content Include="images\items\hat_Julie.jpg" />
     <Content Include="images\items\medium_130x170.jpg" />
     <Content Include="images\items\pillow.jpg" />
     <Content Include="images\items\pillow_h.jpg" />
@@ -465,6 +499,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_LayoutMaster.cshtml" />
+    <Content Include="Views\Home\Pleds.cshtml" />
+    <Content Include="Views\Home\Caps.cshtml" />
+    <Content Include="Views\Home\Accessories.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -490,7 +528,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>17760</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55668/</IISUrl>
+          <IISUrl>http://localhost:1090</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -10,5 +10,6 @@ namespace PledDream.Models
     {
         public ContactInfo ContactInfo { get; set; }
         public List<Color> Colors { get; set; }
+        public List<Color> Colors_Peru { get; set; }
     }
 }

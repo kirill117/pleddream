@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#sendBtn").click(function() {
+            SendOrder();
+        });
+
+        $(".blog .date").click(function () {
+            var txt = $(this).parent().find("h4").html();
+            $("#message").val(txt);
+        });
+    });
+
+    function ToggleLoader(if_show)
+    {
+        if (if_show) {
+            $(".loaderArea").addClass('loading');
+        }
+        else {
+            $(".loaderArea").removeClass('loading');
+        }
+
+    }
+
+    function SendOrder() {
+        var email = $("#address").val().trim();
+        var name = $("#name").val().trim();
+        var phone = $("#phone").val().trim();
+        var message = $("#message").val().trim();
+
+        if (name.length == 0) {
+            $("#name").addClass("error").focus();
+            return;
+        }
+        if (phone.length == 0) {
+            $("#phone").addClass("error").focus();
+            return;
+        }
+        if (email.length == 0) {
+            $("#address").addClass("error").focus();
+            return;
+        }
+        if (message.length == 0) {
+            $("#message").addClass("error").focus();
+            return;
+        }
+
+        $("#address").removeClass("error");
+        $("#name").removeClass("error");
+        $("#phone").removeClass("error");
+        $("#message").removeClass("error");
+
+        var text_result = 'Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.';
+
+        $.ajax({
+            type: 'POST',
+            url: '/Home/SendOrder',
+            data: { email, name, phone, message},
+            dataType: 'json',
+            async: true,
+            success: function (response) {
+                if (response.Result == 1)
+                    text_result = "Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.";
+                else
+                    text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
+
+                try {
+                    yaCounter44276064.reachGoal('ORDER');
+                } catch (e) { }
+            },
+            error: function () {
+                text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
+            }
+        });
+
+        if (text_result.length > 0) {
+            $("#dialogContainer").html(text_result);
+            $("#dialogContainer").dialog({
+                width: 350,
+                height: 250,
+                modal: true,
+                title: "Pled Dream",
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                },
+                show: {
+                    effect: "fade",
+                    duration: 200
+                },
+                hide: {
+                    effect: "fade",
+                    duration: 200
+                },
+                open: function() { $(".ui-dialog-titlebar-close").hide(); }
+            });
+        }
+    }
+</script>
+
+<div id="demo_top_wrapper">
+    <div class="header-small">
+        <div class="logo-small">
+            <b>Pled Dream</b><img src="~/images/title.png" alt="" />
+            <p style="font-weight:700">100% merino wool</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    @RenderBody()
+</div>
+                
+<div class="contact text-center" id="contact">
+    <h3>Форма заказа</h3>
+    <i class="line"></i>
+    <p class="subtitle">Ваша мечта- наш плед!</p>
+    <div id="mail" class="form">
+        <input id="name" type="text" placeholder="Ваше имя" required />
+        <input id="phone" type="text" placeholder="Телефон" required />
+        <input id="address" type="email" placeholder="E-mail" required />
+        <textarea id="message" placeholder="Комментарий"></textarea>
+        <input type="button" id="sendBtn" class="btn btn-success" value="Заказать" />
+    </div>
+</div>
+
+<div id="dialogContainer" style="display:none;"></div>

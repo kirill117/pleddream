@@ -8,6 +8,7 @@ namespace PledDream.Models
     [Serializable]
     public class ContactInfo
     {
-        public string OrderEmail = "pero76@yandex.ru";
+        public string OrderEmail { get; set; }
+        public string Phone { get; set; }
     }
 }

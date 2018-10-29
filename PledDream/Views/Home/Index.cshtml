@@ -1,143 +1,17 @@
 ﻿@using PledDream.Helpers
 
-@model PledDream.Models.MainViewModel
-
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#sendBtn").click(function() {
-            SendOrder();
-        });
-
-        $(".blog .date").click(function () {
-            var txt = $(this).parent().find("h4").html();
-            $("#message").val(txt);
-        });
-    });
-
-    function ToggleLoader(if_show)
-    {
-        if (if_show) {
-            $(".loaderArea").addClass('loading');
-        }
-        else {
-            $(".loaderArea").removeClass('loading');
-        }
-
-    }
-
-    function SendOrder() {
-        var email = $("#address").val().trim();
-        var name = $("#name").val().trim();
-        var phone = $("#phone").val().trim();
-        var message = $("#message").val().trim();
-
-        if (name.length == 0) {
-            $("#name").addClass("error").focus();
-            return;
-        }
-        if (phone.length == 0) {
-            $("#phone").addClass("error").focus();
-            return;
-        }
-        if (email.length == 0) {
-            $("#address").addClass("error").focus();
-            return;
-        }
-        if (message.length == 0) {
-            $("#message").addClass("error").focus();
-            return;
-        }
-
-        $("#address").removeClass("error");
-        $("#name").removeClass("error");
-        $("#phone").removeClass("error");
-        $("#message").removeClass("error");
-
-        var text_result = 'Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.';
-
-        $.ajax({
-            type: 'POST',
-            url: '/Home/SendOrder',
-            data: { email, name, phone, message},
-            dataType: 'json',
-            async: true,
-            success: function (response) {
-                if (response.Result == 1) 
-                    text_result = "Ваш заказ отправлен! <br><br> В ближайшее время мы обязательно свяжемся с Вами для уточнения деталей заказа.";
-                else
-                    text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
-
-                try {
-                    yaCounter44276064.reachGoal('ORDER');
-                } catch (e) { }
-            },
-            error: function () {
-                text_result = "Ошибка при отправлении заказа! <br><br> Возможно, Вы указали неверный адрес электронной почты.";
-            }
-        });
-
-        if (text_result.length > 0) {
-            $("#dialogContainer").html(text_result);
-            $("#dialogContainer").dialog({
-                width: 350,
-                height: 250,
-                modal: true,
-                title: "Pled Dream",
-                buttons: {
-                    Ok: function () {
-                        $(this).dialog("close");
-                    }
-                },
-                show: {
-                    effect: "fade",
-                    duration: 200
-                },
-                hide: {
-                    effect: "fade",
-                    duration: 200
-                },
-                open: function() { $(".ui-dialog-titlebar-close").hide(); }
-            });
-        }
-    }
-</script>
-    <div id="demo_top_wrapper">
-	     <div id="sticky_navigation_wrapper">
-		     <div id="sticky_navigation">
-			      <div class="top-menu">
-				     <div class="container">
-					    <a href="#home"><h4>+7 (925) 187-19-67 <br /><i style="font-weight:400;">пн-сб c 11:00 до 21:00</i></h4></a>
-					    <span class="menu"></span>
-                     <ul>
-                         <li><a class="scroll" href="#about">О нас</a></li>
-                         <li><a class="scroll" href="#merinos">О мериносе</a></li>
-                         <!--<li><a class="scroll" href="#gallery">Галлерея</a></li>-->
-                         <li><a class="scroll" href="#colors">Цвета</a></li>
-                         <li><a class="scroll" href="#blog">Цены</a></li>
-                         <li><a class="scroll" href="#accessories">Аксессуары</a></li>
-                         <li class="new"><a href="http://pryazha.pleddream.ru">Пряжа</a></li>
-                         <li><a class="scroll" href="#footer">Контакты</a></li>
-                         <a class="social" href="https://www.instagram.com/pled.dream"><span class="img1"> </span></a>
-                         <a class="social" href="#"><span class="img2"> </span></a>
-                         <a class="social" href="#"><span class="img3"> </span></a>
-                     </ul>
-					    <div class="clearfix"></div>
-				     </div>
-			      </div>
-		     </div>
-	     </div>
-	    <div id="demo_top">
-			    <div class="header" id="home">
-				    <div class="logo">
-				        <b>Pled Dream</b><img src="images/title.png" alt="" />
-                        <p style="font-weight:700">100% merino wool</p>
-                        <p class="subtitle">Выбери плед своей мечты!</p>
-				    </div>
-			    </div>
+<div id="demo_top_wrapper">
+	<div id="demo_top">
+			<div class="header" id="home">
+				<div class="logo">
+				    <b>Pled Dream</b><img src="~/images/title.png" alt="" />
+                    <p style="font-weight:700">100% merino wool</p>
+                    <p class="subtitle">Выбери плед своей мечты!</p>
+				</div>
+			</div>
 		
-	     </div>
-    </div>
+	    </div>
+</div>
 <!---->
     <section id="main">
         <div class="top-news">
@@ -181,7 +55,7 @@
             <div class="container">
                 <div class="about-grids">
                     <div class="col-md-6 about-info">
-                        <img src="images/about.jpg" alt="" />
+                        <img src="~/images/about.jpg" alt="" />
                     </div>
                     <div class="col-md-6 about-info">
                         <h4>О нас</h4>
@@ -198,7 +72,7 @@
             </div>
         </div>
         <div class="merinos" id="merinos">
-            <video src="images/file.mp4" autoplay loop></video>
+            <video src="~/images/file.mp4" autoplay loop></video>
             <div class="about-container">
                 <div class="">
                     <h4>О мериносе</h4>
@@ -217,7 +91,7 @@
             <div class="container">
                 <div class="about-grids">
                     <div class="col-md-6 about-info">
-                        <img src="images/properties.jpg" alt="" />
+                        <img src="~/images/properties.jpg" alt="" />
                     </div>
                     <div class="col-md-6 about-info props">
                         <h4>Уникальные свойства мериноса</h4>
@@ -244,500 +118,46 @@
                     <ul id="flexiselDemo1">
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s1.jpg" alt="">
+                                <img src="~/images/gallery/s1.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s2.jpg" alt="">
+                                <img src="~/images/gallery/s2.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s3.jpg" alt="">
+                                <img src="~/images/gallery/s3.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s4.jpg" alt="">
+                                <img src="~/images/gallery/s4.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s5.jpg" alt="">
+                                <img src="~/images/gallery/s5.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s6.jpg" alt="">
+                                <img src="~/images/gallery/s6.jpg" alt="">
                             </div>
                         </li>
                         <li>
                             <div class="biseller-column">
-                                <img src="images/gallery/s7.jpg" alt="">
+                                <img src="~/images/gallery/s7.jpg" alt="">
                             </div>
                         </li>
-                        <!--<li>
-                            <div class="biseller-column">
-                                <img src="images/gallery/s8.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="biseller-column">
-                                <img src="images/gallery/s9.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="biseller-column">
-                                <img src="images/gallery/s10.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="biseller-column">
-                                <img src="images/gallery/s11.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="biseller-column">
-                                <img src="images/gallery/s12.jpg" alt="">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="biseller-column">
-                                <img src="images/gallery/s14.jpg" alt="">
-                            </div>
-                        </li>-->
                     </ul>
-
                 </div>
             </div>
-                <div class="colors" id="colors">
-                    <div class="about-colors">
-                        <h3>Цвета</h3>
-                        <small></small>
-                        <br />
-                        <p class="subtitle">У нас в ассортименте 30 потрясающих оттенков пряжи на любой вкус</p>
-                        <div class="container">
-                            @foreach (var item in Model.Colors.OrderBy(s => s.index))
-                            {
-                            <div class="color-info">
-                                <img src="@("images/colors/" + item.file)" alt="" />
-                                <p class="">@item.name</p>
-                                <l>(@(item.amount > 0 ? "в наличии" : "под заказ"))</l>
-                            </div>   
-                            }
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="blog" id="blog">
-                    <h3>Размеры и цены</h3>
-                    <small></small>
-                    <p class="subtitle">Мы предлагаем  пледы 6-ти размеров на выбор, чтобы максимально учесть все Ваши пожелания</p>
-                    <div class="container">
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/baby_45x60.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>BABY   45 х 60см</h4>
-                                    <span></span>
-                                    <p>
-                                        Идеальный вариант пледа в коляску для самых крохотных и нежных…  Подходит для долгих прогулок как зимой, так и в межсезонье.
-                                        Наш плед не позволит малышу перегреться или переохладиться.
-                                    </p>
-                                    <div class="icons">
-                                        2500 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/baby_45x60_1.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>BABY+   80 х 120см </h4>
-                                    <span></span>
-                                    <p>
-                                        Плед из мериноса такого размера замечательно подойдет для детей постарше в кроватку или на диван.
-                                        Это  теплое уютное облачко будет незаменимым аксессуаром и мягким другом ребенку даже в путешествии, благодаря своим компактным размерам.
-                                    </p>
-                                    <div class="icons">
-                                        4500 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/standart_100x150.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>STANDART  100 х 150см</h4>
-                                    <span></span>
-                                    <p>
-                                        Самый популярный размер пледа и отличный вариант для подарка, особенно если нужно подобрать что-то солидное и неординарное для коллеги или  руководителя.
-                                        Но и себя побаловать за городом или на даче прохладным вечерком будет не лишним, укутаться в   плед из толстой пряжи мериноса и наслаждаться тишиной и свежим воздухом…. Что может быть лучше?
-                                    </p>
-                                    <div class="icons">
-                                        6900 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/standart_120x160.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>STANDART+   120 х 160см</h4>
-                                    <span></span>
-                                    <p>
-                                        Нравиться проводить вечера и выходные в любимом кресле с интересной книгой? Или в кровати  у телевизора?
-                                        Тогда Вам просто необходим плед для домоседов  из толстой мягкой шерсти мериноса. Он Вас околдует и не выпустит из своих объятий до утра понедельника.
-                                        А благодаря увеличенным размерам это пледа в него удобно и легко можно закутаться с головой  и забыть обо всем на свете…
-                                    </p>
-                                    <div class="icons">
-                                        <div class="old-price">8800</div>
-                                        <div class="new-price">8000 ₽</div>
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/medium_130x170.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>MEDIUM  130 х 170см</h4>
-                                    <span></span>
-                                    <p>
-                                        Лучший подарок на праздник, на день рождения и новоселье – конечно плед из мериноса ручной работы.
-                                        Пледы крупной вязки стали очень популярны, и многие дизайнеры используют их в своих проектах  для создания неповторимого  изысканного стиля и законченности в интерьерах.
-                                        Плед из мериноса будет идеально смотреться как в  классическом, так и в стилях прованс, поп-арт или хайтек.  Надо лишь правильно подобрать оттенок и стиль вязки пледа…
-                                    </p>
-                                    <div class="icons">
-                                        10400 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/queen_150x200.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>QUEEN -150 x 200см</h4>
-                                    <span></span>
-                                    <p>
-                                        Наконец-то мы добрались до самого важного…  В каждом доме есть главной место уюта и покоя – спальня.
-                                        Здесь люди проводят треть своей жизни, а значит в спальне необходимо создать  самую волшебную и  умиротворяющую атмосферу.
-                                        В этом  наш плед королевского размера просто незаменим. Сделайте этот шикарный подарок на свадьбу друзьям, на юбилей родителям или просто побалуйте себя любимых…
-                                    </p>
-                                    <div class="icons">
-                                        13000 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="blog" id="accessories">
-                    <h3>Аксессуары</h3>
-                    <small></small>
-                    <p class="subtitle"></p>
-                    <div class="container">
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/scarf_braid.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Шарф коса</h4>
-                                    <span></span>
-                                    <p>
-                                        Шарф коса – общая длина этого уютного создания 3 м!
-                                        Универсальный модный шарф-коса подходит как девушкам, там и мужчинам.
-                                    </p>
-                                    <div class="icons">
-                                        2000 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/scarf.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Шарф</h4>
-                                    <span></span>
-                                    <p>
 
-                                    </p>
-                                    <div class="icons">
-                                        2000 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/snud.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Снуд</h4>
-                                    <span></span>
-                                    <p>
-                                        Oбъем 60см
-                                    </p>
-                                    <div class="icons">
-                                        1800 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/snud_1.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Снуд</h4>
-                                    <span></span>
-                                    <p>
-                                        Модные  теплые снуды  крупной вязки - тренд года.  Разные модели, на любой вкус.
-                                        Снуд  связан руками из 100% шерсти мериноса. Уютный, нежный и совсем не колючий.
-                                        Снуд  выполнен в один оборот, общая длина 70см, ширина 20см
-                                    </p>
-                                    <div class="icons">
-                                        2000 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/hat.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Шапка Хельсинки</h4>
-                                    <span></span>
-                                    <p>
-                                        Шапка Хельсинки без отворота
-                                    </p>
-                                    <div class="icons">
-                                        1800 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        @*<div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/cardigan.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Кардиган</h4>
-                                    <span></span>
-                                    <p>
-                                        Кардиган - бомбер с рукавом-колоколом 3/4, выполнен  в крупной вязке  из толстой пряжи мериноса.
-                                        Когда хочется обновить свой гардероб, порадовать себя уютной модной вещью, а  также  завладеть взглядами поклонников и  менее удачливых модниц...
-                                        Размер кардигана 42-46.
-                                    </p>
-                                    <div class="icons">
-                                        7000 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>*@
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/hat_1.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Шапка</h4>
-                                    <span></span>
-                                    <p>
-                                        Шикарная шапка из натуральной шерсти мериноса ручной окраски с большим помпоном из  натурального енота в цвете мультиколор.
-                                        Полностью ручная работа от покраски пряжи до финального ВТО изделия.
-                                        Размер 54-57.
-                                        Помпон снимается.
-                                        В единственном экземпляре! 
-                                    </p>
-                                    <div class="icons">
-                                        3500 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/dog_home.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Лежанка для кошек и собак</h4>
-                                    <span></span>
-                                    <p>
-                                        Лежанка  для кошек и маленьких собачек выполнена из толстой пряжи мериноса. 
-                                        Шерсть мериноса - гипоаллергенный материал, она не вызывает раздражение даже у животных с чувствительной кожей.  
-                                        Эта лежанка станет самым любимым теплым гнездышком особенно для голых пород кошек и собак.  Диаметр лежанки 40см.
-                                    </p>
-                                    <div class="icons">
-                                        3500 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="images/items/pillow.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Подушка 45х45см</h4>
-                                    <span></span>
-                                    <p>
-                                        Когда Вы думаете о создании уютной атмосферы своей гостиной или спальни, что приходит в голову?
-                                        Правильно - удобный диван или любимое кресло, большая  мягкая кровать или воздушный пуфик... но без подушек красивых и разных,  подушек ярких и пастельных, подушек больших и маленьких -  слово "уют" не звучит....
-                                        Декоративные подушки  это неотъемлемая часть современного интерьере. 
-                                    </p>
-                                    <div class="icons">
-                                        3500 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="~/images/items/scarf_big.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Большой шарф</h4>
-                                    <span></span>
-                                    <p>
-                                        Модный и стильный шарф для любой непогоды.
-                                        В наших широтах без такого уютного аксессуара не обойтись.
-                                        Шарф из 100% мериноса, ручная вязка. Общая длина 180см. 
-                                    </p>
-                                    <div class="icons">
-                                        3000 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="item-container">
-                                <div class="blog-img">
-                                    <img src="~/images/items/pillow_h.jpg" alt="" class="img-responsive" />
-                                </div>
-                                <div class="img-desc">
-                                    <h4>Шапка Хельсинки с помпоном из меха</h4>
-                                    <span></span>
-                                    <p>
-                                        К излюбленной классической модели мы решили добавить помпон из натурального меха.
-                                        Маленькое обновление для тех, кто любит разнообразие.
-                                    </p>
-                                    <div class="icons">
-                                        2300 ₽
-                                    </div>
-                                    <a class="date" href="#contact" title="">Заказать</a>
-                                </div>
-                            </div>
-                        </div>                    
-                    </div>
-                </div>
+   
 
-                <div class="contact text-center" id="contact">
-                    <h3>Форма заказа</h3>
-                    <i class="line"></i>
-                    <p class="subtitle">Ваша мечта- наш плед!</p>
-                    <div id="mail" class="form">
-                        <input id="name" type="text" placeholder="Ваше имя" required />
-                        <input id="phone" type="text" placeholder="Телефон" required />
-                        <input id="address" type="email" placeholder="E-mail" required />
-                        <textarea id="message" placeholder="Комментарий"></textarea>
-                        <input type="button" id="sendBtn" class="btn btn-success" value="Заказать" />
-                    </div>
-                </div>
-                <!---->
-                <div class="delivery" id="delivery">
-                    <div class="delivery-container">
-                            <h3>Способы доставки</h3>
-                            <label></label>
-                            <p class="subtitle">Оплата доставки осуществляется наличными курьеру при получении товара</p>
-                            <p>Самовывоз (г.Москва, ул.Исаковского) - бесплатно</p>
-                            <p>Доставка курьером по Вашему адресу в пределах МКАД (в течение 1-3 дней) - 500р</p>
-                            <p>Доставка курьером по Вашему адресу за МКАД до 10 км (в течение 1-3 дней) - 700р</p>
-                            <p>Доставка по России курьерской службой - в зависимости от удаленности 500-1500р</p>
-                            <p>Доставка по миру - в зависимости от удаленности 1500-6000р</p>
-                    </div>
-                </div>
-                <!---->
-                <div class="fotter" id="footer">
-                    <div class="scale"></div>
-                    <div class="container">
-                        <div class="col-md-2 footer-info"></div>
-                        <div class="col-md-2 footer-info">
-                            <b>Адрес</b>
-                            <p>Россия, г.Москва</p>
-                        </div>
-                        <div class="col-md-2 footer-info">
-                            <b>Контакты</b>
-                            <p>
-                                pleddream@yandex.ru<br />
-                                Тел. +7 (925) 187-19-67
-                            </p>
-                        </div>
-                        <div class="col-md-2 footer-info">
-                            <b>Часы работы</b>
-                            <p>
-                                Пн - Сб<br />
-                                11:00–21:00
-                            </p>
-                        </div>
-                        <div class="col-md-2 footer-info">
-                            <b>ПОДПИШИТЕСЬ НА НОВОСТИ</b>
-                        </div>
-                    </div>
-                    <p class="copyright">©@(DateTime.Now.Year.ToString()) «Pled Dream»</p>
-                </div>
 
-                <!---->
+
     </section>	
 
-<div id="dialogContainer" style="display:none;"></div>

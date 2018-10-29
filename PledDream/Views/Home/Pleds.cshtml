@@ -1,0 +1,213 @@
+﻿@model PledDream.Models.MainViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<div class="blog">
+    <h3>Пледы из мериноса</h3>
+    <small></small>
+    <div class="container">
+        <div class="col-md-12">
+            <p>
+                Последнее время нас стремительно завоевывает любовь к Hugge.
+                Стиль Хюгге – это сочетание уюта, комфорта, умиротворения и
+                благополучия.<br />
+                Мы готовы помочь Вам в создании этой удивительной атмосферы
+                счастья, ведь наши пледы крупной вязки просто созданы для Hugge.
+                Мягкие, объемные пледы из натуральной шерсти мериноса –
+                лучший выбор для оформления интерьера в стиле Хюгге.<br />
+                Их 100% натуральность, необычная фактура и приятные тактильные
+                ощущения далеко не единственные достоинства…<br />
+                Познакомьтесь с ними поближе и влюбитесь в них навсегда!
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="colors">
+    <div class="about-colors">
+        <h3>Цвета</h3>
+        <small></small>
+        <br />
+        <p class="subtitle">У нас в ассортименте более 30 потрясающих оттенков пряжи на любой вкус</p>
+        <div class="container">
+            @foreach (var item in Model.Colors.OrderBy(s => s.index))
+            {
+                <div class="color-info">
+                    <img src="~/images/colors/@item.file" alt="" />
+                    <p class="">@item.name</p>
+                    <l>(@(item.amount > 0 ? "в наличии" : "под заказ"))</l>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!---->
+<div class="blog" id="blog">
+    <h3>Размеры и цены</h3>
+    <small></small>
+    <p class="subtitle">Мы предлагаем  пледы 6-ти размеров на выбор, чтобы максимально учесть все Ваши пожелания</p>
+    <div class="container">
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/baby_45x60.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>BABY   45 х 60см</h4>
+                    <span></span>
+                    <p>
+                        Идеальный вариант пледа в коляску для самых крохотных и нежных…  Подходит для долгих прогулок как зимой, так и в межсезонье.
+                        Наш плед не позволит малышу перегреться или переохладиться.
+                    </p>
+                    <div class="icons">
+                        2500 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/baby_45x60_1.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>BABY+   80 х 120см </h4>
+                    <span></span>
+                    <p>
+                        Плед из мериноса такого размера замечательно подойдет для детей постарше в кроватку или на диван.
+                        Это  теплое уютное облачко будет незаменимым аксессуаром и мягким другом ребенку даже в путешествии, благодаря своим компактным размерам.
+                    </p>
+                    <div class="icons">
+                        4500 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/standart_100x150.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>STANDART  100 х 150см</h4>
+                    <span></span>
+                    <p>
+                        Самый популярный размер пледа и отличный вариант для подарка, особенно если нужно подобрать что-то солидное и неординарное для коллеги или  руководителя.
+                        Но и себя побаловать за городом или на даче прохладным вечерком будет не лишним, укутаться в   плед из толстой пряжи мериноса и наслаждаться тишиной и свежим воздухом…. Что может быть лучше?
+                    </p>
+                    <div class="icons">
+                        6900 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/standart_120x160.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>STANDART+   120 х 160см</h4>
+                    <span></span>
+                    <p>
+                        Нравиться проводить вечера и выходные в любимом кресле с интересной книгой? Или в кровати  у телевизора?
+                        Тогда Вам просто необходим плед для домоседов  из толстой мягкой шерсти мериноса. Он Вас околдует и не выпустит из своих объятий до утра понедельника.
+                        А благодаря увеличенным размерам это пледа в него удобно и легко можно закутаться с головой  и забыть обо всем на свете…
+                    </p>
+                    <div class="icons">
+                        <div class="old-price">8800</div>
+                        <div class="new-price">8000 ₽</div>
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/medium_130x170.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>MEDIUM  130 х 170см</h4>
+                    <span></span>
+                    <p>
+                        Лучший подарок на праздник, на день рождения и новоселье – конечно плед из мериноса ручной работы.
+                        Пледы крупной вязки стали очень популярны, и многие дизайнеры используют их в своих проектах  для создания неповторимого  изысканного стиля и законченности в интерьерах.
+                        Плед из мериноса будет идеально смотреться как в  классическом, так и в стилях прованс, поп-арт или хайтек.  Надо лишь правильно подобрать оттенок и стиль вязки пледа…
+                    </p>
+                    <div class="icons">
+                        10400 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/queen_150x200.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>QUEEN -150 x 200см</h4>
+                    <span></span>
+                    <p>
+                        Наконец-то мы добрались до самого важного…  В каждом доме есть главной место уюта и покоя – спальня.
+                        Здесь люди проводят треть своей жизни, а значит в спальне необходимо создать  самую волшебную и  умиротворяющую атмосферу.
+                        В этом  наш плед королевского размера просто незаменим. Сделайте этот шикарный подарок на свадьбу друзьям, на юбилей родителям или просто побалуйте себя любимых…
+                    </p>
+                    <div class="icons">
+                        13000 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/dog_home.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>Лежанка для кошек и собак</h4>
+                    <span></span>
+                    <p>
+                        Лежанка  для кошек и маленьких собачек выполнена из толстой пряжи мериноса.
+                        Шерсть мериноса - гипоаллергенный материал, она не вызывает раздражение даже у животных с чувствительной кожей.
+                        Эта лежанка станет самым любимым теплым гнездышком особенно для голых пород кошек и собак.  Диаметр лежанки 40см.
+                    </p>
+                    <div class="icons">
+                        3500 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="item-container">
+                <div class="blog-img">
+                    <img src="~/images/items/pillow.jpg" alt="" class="img-responsive" />
+                </div>
+                <div class="img-desc">
+                    <h4>Подушка 45х45см</h4>
+                    <span></span>
+                    <p>
+                        Когда Вы думаете о создании уютной атмосферы своей гостиной или спальни, что приходит в голову?
+                        Правильно - удобный диван или любимое кресло, большая  мягкая кровать или воздушный пуфик... но без подушек красивых и разных,  подушек ярких и пастельных, подушек больших и маленьких -  слово "уют" не звучит....
+                        Декоративные подушки  это неотъемлемая часть современного интерьере.
+                    </p>
+                    <div class="icons">
+                        3500 ₽
+                    </div>
+                    <a class="date" href="#contact" title="">Заказать</a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+

@@ -10,6 +10,12 @@
         url(../fonts/BRUSHSCI.TTF);
 }
 
+@font-face {
+	font-family: Lobster; 
+	src: local("Lobster"), 
+        url(../fonts/Lobster.ttf);
+}
+
 body{
 	margin:0;
 	padding:0;
@@ -67,6 +73,7 @@ padding:0;
 .subtitle{
     font-family:'Monotype Corsiva','Segoe Script' !important;
     font-size:26px !important;
+    text-align:center !important;
 }
 /*----*/
 .header{
@@ -78,6 +85,17 @@ padding:0;
 	min-height:780px;
 	position:relative;
 }
+
+.header-small{
+	background:url(../images/banner2.jpg) no-repeat 0px 0px;
+	background-size:cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	height:360px;
+	position:relative;
+}
+
 .logo{
     text-align:center;
     color: #fff;
@@ -86,6 +104,36 @@ padding:0;
     padding-top: 100px;
     background-color: rgba(0,0,0,0.1);
 }
+
+.logo-small {
+    text-align:center;
+    color: #fff;
+    font-size: 32px;
+    font-family:'Raleway', sans-serif;
+    padding-top: 40px;
+    line-height:1;
+}
+
+.logo-small b {
+    color: #fff;
+    margin-left:100px;
+    font-family:'Brush Script MT','Raleway', sans-serif;
+    font-size: 130px;
+    font-weight:100;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-small p{
+    font-size:40px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.logo-small img{
+    margin-bottom:140px;
+    width:80px;
+    height:80px;
+}
+
 .logo b{
     color: #fff;
     margin-left:100px;
@@ -140,11 +188,14 @@ padding:0;
 }
 
 .top-menu ul{
-	float:right;
-	margin-bottom:0;
+	/*float:right;
+	margin-bottom:0;*/
+	font-family: Lobster; 
 }
-.top-menu ul li{
-	display:inline-block;
+
+.navbar {
+    margin-bottom:0 !important;
+    min-height: 40px !important;
 }
 
 .top-menu ul li.new {
@@ -158,14 +209,19 @@ padding:0;
 .top-menu ul li a{
 	text-decoration: none;
 	color: #364356;
-	margin:0 1.5em;
+	margin:0 25px;
 	font-size: 18px;
 	padding: 10px 0 0 0;
 	display: block;
 }
-.top-menu ul li a:hover{
+.top-menu ul li a:hover {
 	color:#FF6D6B;
+    background-color: transparent;
 }
+.top-menu ul li a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+}
+
 .top-menu a span{
 	width:20px;
 	height:20px;
@@ -243,7 +299,6 @@ padding:0;
 }
 .delivery{
     color:#fff;
-    height:400px;
     padding: 0;
     position:relative;
     background:url(../images/delivery.jpg)  0px 0px;
@@ -254,10 +309,11 @@ padding:0;
     height:100%;
     text-align:center;
     padding-top:25px;
+    padding-bottom:25px;
 }
 
 .merinos h4{
-    margin-top:70px !important;
+    margin-top:10px !important;
     color: #364356;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -284,12 +340,13 @@ padding:0;
 }
 .color-info img{
     background-color:transparent;
-    width:150px;
-    height:150px;
+    width:90px;
+    height:90px;
 }
 
 .color-info p{
-    font-size:18px;
+    font-size:14px;
+    font-weight:600;
     margin:0;
 }
 
@@ -303,7 +360,7 @@ padding:0;
     margin:10px 15px 5px 0px;
     padding-bottom:15px;
     vertical-align: top;
-    max-width: 150px;
+    max-width: 110px;
 }
 
 h3{
@@ -523,7 +580,7 @@ video {
 }
 .blog{
 	background:#fff;
-	text-align:center;
+	text-align:justify;
 }
 .blog h3{
 	position: relative;
@@ -543,6 +600,7 @@ video {
 	font-size:14px;
 	width: 100%;
 	margin:5px auto;
+    padding:10px;
 }
 
 .img-desc span{
@@ -604,7 +662,7 @@ a.date h5:hover{
 }
 .img-desc p{
 	line-height: 19px;
-    height:120px;
+    height:150px;
 }
 .img-desc .icons 
 {
@@ -1084,6 +1142,9 @@ i.line{
 }
 }
 @media (max-width: 768px){
+    .header-small {
+        height: 100%;
+    }
 .logo {
 	left: 29%;
 	top: 29%;
@@ -1217,32 +1278,32 @@ a.date {
 	top: 83%;
 }
 }
-@media (max-width: 480px){
+@media (max-width: 768px){
     .header {
 	    min-height: 100%;
     }
-    .logo a img {
+    .logo-small a img, .logo a img {
 	    width: 51%;
     }
-    .logo {
-        padding-top:30px;
+    .logo, .logo-small {
+        padding-top:0px;
     }
 
-    .logo img {
+    .logo img, .logo-small img {
         margin-bottom: 20px;
         width: 30px;
         height: 30px;
     }
-    .logo b{
+    .logo b, .logo-small b{
         font-size: 42px;
         margin-left:30px;
     }
 
-    .logo p{
+    .logo p, .logo-small p{
         font-size: 16px;
     }
 
-    .logo .subtitle {
+    .logo .subtitle, .logo-small .subtitle {
     font-size: 18px !important;
     }
 
@@ -1255,19 +1316,8 @@ a.date {
     }
 
     .top-menu h4 {
-	    font-size: 7px;
+
 	    margin: 2px 0 0 5px;
-    }
-    
-    .top-menu h4 i {
-	    font-size: 6px;
-    }
-    
-    .top-menu ul li {
-        font-size:7px;
-    }
-    .top-menu a span {
-	    display:none;
     }
 
     .subtitle {

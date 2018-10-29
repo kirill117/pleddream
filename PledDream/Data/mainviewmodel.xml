@@ -1,6 +1,7 @@
 ﻿<MainViewModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ContactInfo>
     <OrderEmail>pleddream@yandex.ru</OrderEmail>
+    <Phone>+7 (925) 187-19-67</Phone>
   </ContactInfo>
   <Colors>
     <Color>
@@ -221,4 +222,180 @@
       <amount>1</amount>
     </Color>
   </Colors>
+  <Colors_Peru>
+     <Color>
+      <index>1</index>
+      <name>Пломбир</name>
+      <file>8001.jpg</file>
+      <amount>0</amount>
+    </Color>   
+     <Color>
+      <index>1</index>
+      <name>Сливочный крем</name>
+      <file>8002.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Серебристая дымка</name>
+      <file>8003.jpg</file>
+      <amount>1</amount>
+    </Color>
+       <Color>
+      <index>1</index>
+      <name>Карамель</name>
+      <file>8004.jpg</file>
+      <amount>0</amount>
+    </Color>
+    <Color>
+      <index>1</index>
+      <name>Радужный беж</name>
+      <file>8005.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Горчица</name>
+      <file>8006.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Черный</name>
+      <file>8010.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Синий электрик</name>
+      <file>8031.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Глубокий синий</name>
+      <file>8033.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Мятный леденец</name>
+      <file>8035.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Небо</name>
+      <file>8036.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Лимон</name>
+      <file>8042.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Мандариновый фреш</name>
+      <file>8044.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Изумруд</name>
+      <file>8045.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Греческая олива</name>
+      <file>8046.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Красная помада</name>
+      <file>8050.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Бургундия</name>
+      <file>8053.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Фуксия</name>
+      <file>8054.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Сиреневый туман</name>
+      <file>8055.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Розовый кварц</name>
+      <file>8056.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Зефир</name>
+      <file>8057.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Марсала</name>
+      <file>8058.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Лиловый</name>
+      <file>8059.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Барби</name>
+      <file>8060.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Фисташка</name>
+      <file>8061.jpg</file>
+      <amount>1</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Волшебный багрянец</name>
+      <file>8062.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Весенняя листва</name>
+      <file>8063.jpg</file>
+      <amount>0</amount>
+    </Color>
+     <Color>
+      <index>1</index>
+      <name>Ультрафиолет</name>
+      <file>8064.jpg</file>
+      <amount>1</amount>
+    </Color>
+    <Color>
+      <index>1</index>
+      <name>Терракот</name>
+      <file>8065.jpg</file>
+      <amount>0</amount>
+    </Color>
+</Colors_Peru>
 </MainViewModel>
