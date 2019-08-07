@@ -1,7 +1,7 @@
 ﻿@model PledDream.Models.MainViewModel
 
 @{
-    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    Layout = "~/Views/Shared/_LayoutShort.cshtml";
 }
 
 <div class="blog">
@@ -82,12 +82,13 @@
                         При оформлении заказ , пожалуйста, указывайте нужный размер и цвет изделия из нашей палитры!
                     </p>
                     <div class="icons">
-                        3000 ₽
+                        3500 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+@Html.Partial("_OrderFormPartial", Model.Colors_Peru)

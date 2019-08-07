@@ -1,4 +1,10 @@
 ﻿@using PledDream.Helpers
+@using PledDream.Models
+
+@{
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
 
 <div id="demo_top_wrapper">
 	<div id="demo_top">
@@ -156,7 +162,9 @@
             </div>
 
    
-
+        <div id="pleds">
+            @Html.Partial("pleds", XMLHelper.Get<MainViewModel>())
+        </div>
 
 
     </section>	

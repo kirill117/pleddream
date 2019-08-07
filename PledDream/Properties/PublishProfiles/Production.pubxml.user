@@ -19,10 +19,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>10/22/2018 22:57:29</publishTime>
+      <publishTime>04/11/2019 00:38:01</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>10/22/2018 22:57:28</publishTime>
+      <publishTime>04/11/2019 00:38:01</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -100,7 +100,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/11/2018 00:30:02</publishTime>
     </File>
     <File Include="bin/PledDream.dll">
-      <publishTime>10/22/2018 22:43:36</publishTime>
+      <publishTime>04/11/2019 00:37:45</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>04/24/2017 11:35:18</publishTime>
@@ -301,10 +301,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Content/sticky-navigation.css">
-      <publishTime>08/29/2018 00:27:45</publishTime>
+      <publishTime>10/28/2018 00:37:45</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>10/21/2018 23:48:32</publishTime>
+      <publishTime>04/10/2019 00:58:38</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -472,10 +472,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/22/2018 22:56:53</publishTime>
     </File>
     <File Include="Data/MessagesModel.xml">
-      <publishTime>08/29/2018 00:27:45</publishTime>
+      <publishTime>04/10/2019 00:28:35</publishTime>
     </File>
     <File Include="Data/NewsModel.xml">
-      <publishTime>10/22/2018 22:24:35</publishTime>
+      <publishTime>10/24/2018 00:33:59</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -819,6 +819,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="images/items/standart_120x160.jpg">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
+    <File Include="images/items/standart_90x140.JPG">
+      <publishTime>12/11/2018 23:41:57</publishTime>
+    </File>
     <File Include="images/line.png">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
@@ -839,6 +842,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="images/s13.jpg">
       <publishTime>08/29/2018 00:27:45</publishTime>
+    </File>
+    <File Include="images/sale-20.png">
+      <publishTime>12/11/2018 23:54:17</publishTime>
+    </File>
+    <File Include="images/sale-25.png">
+      <publishTime>12/11/2018 23:58:12</publishTime>
     </File>
     <File Include="images/skil.png">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -862,7 +871,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:10:40</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>10/22/2018 22:57:12</publishTime>
+      <publishTime>04/11/2019 00:37:49</publishTime>
     </File>
     <File Include="Scripts/ai.0.15.0-build58334.js">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -1012,19 +1021,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Views/Home/Accessories.cshtml">
-      <publishTime>10/22/2018 21:24:26</publishTime>
+      <publishTime>04/10/2019 00:46:15</publishTime>
     </File>
     <File Include="Views/Home/Caps.cshtml">
-      <publishTime>10/22/2018 21:22:35</publishTime>
+      <publishTime>04/10/2019 00:47:23</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/20/2018 00:42:32</publishTime>
+      <publishTime>04/10/2019 00:26:03</publishTime>
     </File>
     <File Include="Views/Home/Pleds.cshtml">
-      <publishTime>10/22/2018 21:35:18</publishTime>
+      <publishTime>04/10/2019 00:43:11</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -1051,13 +1060,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/22/2018 00:08:41</publishTime>
+      <publishTime>04/10/2019 00:15:45</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
-      <publishTime>10/20/2018 00:56:55</publishTime>
+      <publishTime>04/11/2019 00:32:34</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutShort.cshtml">
+      <publishTime>04/10/2019 00:35:19</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>08/29/2018 00:27:45</publishTime>
+    </File>
+    <File Include="Views/Shared/_OrderFormPartial.cshtml">
+      <publishTime>04/11/2019 00:20:53</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>08/29/2018 00:27:45</publishTime>

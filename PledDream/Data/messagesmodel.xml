@@ -1,4 +1,4 @@
-<MessagesModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<MessagesModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Messages>
     <Message>
       <Date>0001-01-01T00:00:00</Date>
@@ -670,6 +670,14 @@ dsfds
 Тел.: dsf
 E-mail: dsf
 dsfds
+</Text>
+    </Message>
+    <Message>
+      <Date>2019-04-10T00:28:35.4195296+03:00</Date>
+      <Text>Заказчик: rtret
+Тел.: tert
+E-mail: ertert
+QUEEN -150 x 200см
 </Text>
     </Message>
   </Messages>

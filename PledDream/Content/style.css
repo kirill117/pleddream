@@ -71,8 +71,8 @@ padding:0;
 }
 
 .subtitle{
-    font-family:'Monotype Corsiva','Segoe Script' !important;
-    font-size:26px !important;
+    font-family:Lobster,'Segoe Script' !important;
+    font-size:18px !important;
     text-align:center !important;
 }
 /*----*/
@@ -169,13 +169,19 @@ padding:0;
     height:80px;
 }
 
+.img-sale {
+    position:absolute;
+    top:3px;
+    left:50px;
+}
+
 .top-menu{
 	background:#fff;
     height:100%;
 }
 .top-menu h4{
-	font-family: 'Raleway', sans-serif;
-	color:#364356;
+	font-family: Lobster, sans-serif;
+	color:#364356 !important;
 	float:left;
 	font-weight:600;
 	margin: 2px 0 0 0;
@@ -970,6 +976,7 @@ i.line{
 }
 .contact .form input[type="text"],
 .contact .form input[type="email"],
+.contact .form select,
 .contact .form textarea{
 	width:100%;
 	padding:5px;
@@ -1145,6 +1152,11 @@ i.line{
     .header-small {
         height: 100%;
     }
+
+    .img-sale {
+    top:-6px;
+    }
+
 .logo {
 	left: 29%;
 	top: 29%;

@@ -411,6 +411,7 @@
     <Content Include="images\items\snud_1.jpg" />
     <Content Include="images\items\standart_100x150.jpg" />
     <Content Include="images\items\standart_120x160.jpg" />
+    <Content Include="images\items\standart_90x140.JPG" />
     <Content Include="images\line.png" />
     <Content Include="images\link.png" />
     <Content Include="images\merinos.jpg" />
@@ -418,6 +419,8 @@
     <Content Include="images\newYear.jpg" />
     <Content Include="images\properties.JPG" />
     <Content Include="images\s13.jpg" />
+    <Content Include="images\sale-20.png" />
+    <Content Include="images\sale-25.png" />
     <Content Include="images\skil.png" />
     <Content Include="images\snow\2.png" />
     <Content Include="images\snow\snow1.png" />
@@ -503,6 +506,8 @@
     <Content Include="Views\Home\Pleds.cshtml" />
     <Content Include="Views\Home\Caps.cshtml" />
     <Content Include="Views\Home\Accessories.cshtml" />
+    <Content Include="Views\Shared\_LayoutShort.cshtml" />
+    <Content Include="Views\Shared\_OrderFormPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

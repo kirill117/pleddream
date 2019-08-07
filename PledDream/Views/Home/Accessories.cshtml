@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    Layout = "~/Views/Shared/_LayoutShort.cshtml";
 }
 
 <div class="blog" id="accessories">
@@ -37,7 +37,7 @@
                     <div class="icons">
                         2000 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                     <div class="icons">
                         2000 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
                     <div class="icons">
                         1800 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                     <div class="icons">
                         2000 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                     <div class="icons">
                         1800 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                         <div class="icons">
                             7000 ₽
                         </div>
-                        <a class="date" href="#contact" title="">Заказать</a>
+                        <a class="date" href="#contact" title="">Купить</a>
                     </div>
                 </div>
             </div>*@
@@ -155,7 +155,7 @@
                     <div class="icons">
                         3500 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -175,7 +175,7 @@
                     <div class="icons">
                         3000 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -194,7 +194,7 @@
                     <div class="icons">
                         2300 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -217,7 +217,7 @@
                     <div class="icons">
                         2700 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -239,7 +239,7 @@
                     <div class="icons">
                         3000 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
@@ -260,10 +260,11 @@
                     <div class="icons">
                         3500 ₽
                     </div>
-                    <a class="date" href="#contact" title="">Заказать</a>
+                    <a class="date" href="#contact" title="">Купить</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+@Html.Partial("_OrderFormPartial", new List<PledDream.Models.Color>())

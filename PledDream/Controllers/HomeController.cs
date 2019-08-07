@@ -34,7 +34,7 @@ namespace PledDream.Controllers
         }
 
         [HttpPost]
-        public JsonResult SendOrder(string email, string name, string phone, string message)
+        public JsonResult SendOrder(string email, string name, string phone, string message, string color)
         {
             var model = XMLHelper.Get<MainViewModel>();
             var result = 0;
@@ -43,6 +43,11 @@ namespace PledDream.Controllers
             sb.AppendLine("Тел.: " + phone);
             sb.AppendLine("E-mail: " + email);
             sb.AppendLine(message);
+
+            if(!string.IsNullOrEmpty(color))
+            {
+                sb.AppendLine("Цвет: " + color);
+            }
 
             var recipient = model.ContactInfo.OrderEmail;
 
