@@ -80,7 +80,7 @@
       <index>13</index>
       <name>Морковь</name>
       <file>carrot.jpg</file>
-      <amount>1</amount>
+      <amount>0</amount>
     </Color>
     <Color>
       <index>14</index>
@@ -98,7 +98,7 @@
       <index>16</index>
       <name>Мята</name>
       <file>mint.jpg</file>
-      <amount>1</amount>
+      <amount>0</amount>
     </Color>
     <Color>
       <index>17</index>
@@ -146,7 +146,7 @@
       <index>24</index>
       <name>Серо-зеленый</name>
       <file>grey_green.jpg</file>
-      <amount>1</amount>
+      <amount>0</amount>
     </Color>
     <Color>
       <index>25</index>
@@ -158,7 +158,7 @@
       <index>26</index>
       <name>Какао</name>
       <file>cacao.jpg</file>
-      <amount>0</amount>
+      <amount>1</amount>
     </Color>
     <Color>
       <index>27</index>
@@ -187,9 +187,9 @@
 
     <Color>
       <index>31</index>
-      <name>Белый снег</name>
+      <name>Белый</name>
       <file>white.jpg</file>
-      <amount>1</amount>
+      <amount>0</amount>
     </Color>
     <Color>
       <index>32</index>
@@ -221,6 +221,49 @@
       <file>fog.jpg</file>
       <amount>1</amount>
     </Color>
+
+    <Color>
+      <index>37</index>
+      <name>Карнавал</name>
+      <file>karnaval.jpg</file>
+      <amount>1</amount>
+      <isnew>true</isnew>
+    </Color>
+    <Color>
+      <index>38</index>
+      <name>Романтика</name>
+      <file>romantica.jpg</file>
+      <amount>1</amount>
+      <isnew>true</isnew>
+    </Color>
+    <Color>
+      <index>39</index>
+      <name>Бабл Гам</name>
+      <file>buble_gum.jpg</file>
+      <amount>1</amount>
+      <isnew>true</isnew>
+    </Color>
+    <Color>
+      <index>40</index>
+      <name>Маршмеллоу</name>
+      <file>marshmellow.jpg</file>
+      <amount>1</amount>
+      <isnew>true</isnew>
+    </Color>
+    <Color>
+      <index>41</index>
+      <name>Серебрянная орхидея</name>
+      <file>silver_orch.jpg</file>
+      <amount>1</amount>
+      <isnew>true</isnew>
+    </Color>
+    <Color>
+      <index>42</index>
+      <name>Джаз</name>
+      <file>jazz.jpg</file>
+      <amount>1</amount>
+      <isnew>true</isnew>
+    </Color>   
   </Colors>
   <Colors_Peru>
      <Color>

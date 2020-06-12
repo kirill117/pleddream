@@ -1,8 +1,9 @@
 ﻿@model PledDream.Models.MainViewModel
 
 <div class="blog">
-    <h3>Пледы из мериноса</h3>
+    <h3>Пледы из мериноса крупной вязки</h3>
     <small></small>
+    <p class="subtitle">Купить, заказать недорого плед крупной вязки из толстой пряжи в Москве с доставкой</p>
     <div class="container">
         <div class="col-md-12">
             <p>
@@ -25,10 +26,27 @@
     <div class="about-colors">
         <h3>Цвета</h3>
         <small></small>
-        <br />
         <p class="subtitle">У нас в ассортименте более 30 потрясающих оттенков пряжи на любой вкус</p>
+
+        @if (Model.Colors.Any(s => s.isnew))
+        {
+            <br />
+            <p class="new-price">Новинки</p>
+            <div class="container">
+                @foreach (var item in Model.Colors.Where(s => s.isnew).OrderBy(s => s.index))
+                {
+                    <div class="color-info">
+                        <img src="~/images/colors/@item.file" alt="" />
+                        <p class="">@item.name</p>
+                        <l>(@(item.amount > 0 ? "в наличии" : "под заказ"))</l>
+                    </div>
+                }
+            </div>
+            <small></small>
+            <br />
+        }
         <div class="container">
-            @foreach (var item in Model.Colors.OrderBy(s => s.index))
+            @foreach (var item in Model.Colors.Where(s => !s.isnew).OrderBy(s => s.index))
             {
                 <div class="color-info">
                     <img src="~/images/colors/@item.file" alt="" />

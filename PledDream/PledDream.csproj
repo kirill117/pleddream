@@ -315,6 +315,7 @@
     <Content Include="images\colors\blue.JPG" />
     <Content Include="images\colors\bordo.JPG" />
     <Content Include="images\colors\brusnica.JPG" />
+    <Content Include="images\colors\buble_gum.JPG" />
     <Content Include="images\colors\buble_gum_pink.JPG" />
     <Content Include="images\colors\cacao.JPG" />
     <Content Include="images\colors\carrot.JPG" />
@@ -331,9 +332,12 @@
     <Content Include="images\colors\grey_blue.JPG" />
     <Content Include="images\colors\grey_green.JPG" />
     <Content Include="images\colors\hot_pink.JPG" />
+    <Content Include="images\colors\jazz.jpg" />
+    <Content Include="images\colors\karnaval.jpg" />
     <Content Include="images\colors\lemon.JPG" />
     <Content Include="images\colors\light_grey.JPG" />
     <Content Include="images\colors\lilac.JPG" />
+    <Content Include="images\colors\marshmellow.jpg" />
     <Content Include="images\colors\mint.JPG" />
     <Content Include="images\colors\mustard.JPG" />
     <Content Include="images\colors\natur.JPG" />
@@ -343,8 +347,10 @@
     <Content Include="images\colors\plum.JPG" />
     <Content Include="images\colors\pudra.JPG" />
     <Content Include="images\colors\red.jpg" />
+    <Content Include="images\colors\romantica.jpg" />
     <Content Include="images\colors\sand.JPG" />
     <Content Include="images\colors\sea.JPG" />
+    <Content Include="images\colors\silver_orch.jpg" />
     <Content Include="images\colors\turquoise.JPG" />
     <Content Include="images\colors\white.jpg" />
     <Content Include="images\colors_peru\8001.jpg" />

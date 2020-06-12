@@ -19,10 +19,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/11/2019 00:38:01</publishTime>
+      <publishTime>09/30/2019 22:21:14</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/11/2019 00:38:01</publishTime>
+      <publishTime>09/30/2019 22:21:14</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/23/2017 13:15:18</publishTime>
@@ -100,7 +100,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/11/2018 00:30:02</publishTime>
     </File>
     <File Include="bin/PledDream.dll">
-      <publishTime>04/11/2019 00:37:45</publishTime>
+      <publishTime>09/30/2019 22:20:57</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>04/24/2017 11:35:18</publishTime>
@@ -469,7 +469,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Data/mainviewmodel.xml">
-      <publishTime>10/22/2018 22:56:53</publishTime>
+      <publishTime>09/30/2019 22:15:00</publishTime>
     </File>
     <File Include="Data/MessagesModel.xml">
       <publishTime>04/10/2019 00:28:35</publishTime>
@@ -531,6 +531,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="images/colors/brusnica.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
+    <File Include="images/colors/buble_gum.JPG">
+      <publishTime>09/30/2019 22:16:14</publishTime>
+    </File>
     <File Include="images/colors/buble_gum_pink.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
@@ -579,6 +582,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="images/colors/hot_pink.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
+    <File Include="images/colors/jazz.jpg">
+      <publishTime>09/30/2019 22:15:33</publishTime>
+    </File>
+    <File Include="images/colors/karnaval.jpg">
+      <publishTime>09/30/2019 22:06:12</publishTime>
+    </File>
     <File Include="images/colors/lemon.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
@@ -587,6 +596,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="images/colors/lilac.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
+    </File>
+    <File Include="images/colors/marshmellow.jpg">
+      <publishTime>09/30/2019 22:16:57</publishTime>
     </File>
     <File Include="images/colors/mint.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -615,11 +627,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="images/colors/red.jpg">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
+    <File Include="images/colors/romantica.jpg">
+      <publishTime>09/30/2019 22:17:36</publishTime>
+    </File>
     <File Include="images/colors/sand.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="images/colors/sea.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
+    </File>
+    <File Include="images/colors/silver_orch.jpg">
+      <publishTime>09/30/2019 22:18:03</publishTime>
     </File>
     <File Include="images/colors/turquoise.JPG">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -871,7 +889,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/19/2018 23:10:40</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/11/2019 00:37:49</publishTime>
+      <publishTime>09/30/2019 22:21:01</publishTime>
     </File>
     <File Include="Scripts/ai.0.15.0-build58334.js">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -1033,7 +1051,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/10/2019 00:26:03</publishTime>
     </File>
     <File Include="Views/Home/Pleds.cshtml">
-      <publishTime>04/10/2019 00:43:11</publishTime>
+      <publishTime>09/30/2019 22:15:02</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>08/29/2018 00:27:45</publishTime>
@@ -1060,7 +1078,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/10/2019 00:15:45</publishTime>
+      <publishTime>04/11/2019 00:43:23</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutMaster.cshtml">
       <publishTime>04/11/2019 00:32:34</publishTime>
@@ -1072,7 +1090,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2018 00:27:45</publishTime>
     </File>
     <File Include="Views/Shared/_OrderFormPartial.cshtml">
-      <publishTime>04/11/2019 00:20:53</publishTime>
+      <publishTime>04/11/2019 00:53:26</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>08/29/2018 00:27:45</publishTime>

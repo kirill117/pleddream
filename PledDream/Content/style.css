@@ -588,11 +588,14 @@ video {
 	background:#fff;
 	text-align:justify;
 }
-.blog h3{
+.blog h3, .blog h1{
 	position: relative;
 	margin-top: 45px;
-	font-family: 'Lato', sans-serif;
-	letter-spacing: 2px
+	font-family: Calibri, sans-serif;
+	letter-spacing: 1px;
+    text-align:center;
+    font-weight: 600;
+    color: #364356;
 }
 .blog small{
 	display:block;
@@ -670,6 +673,17 @@ a.date h5:hover{
 	line-height: 19px;
     height:150px;
 }
+
+.img-desc p.h200 {
+	line-height: 19px;
+    height:200px;
+}
+
+.img-desc p.h250 {
+	line-height: 19px;
+    height:250px;
+}
+
 .img-desc .icons 
 {
     font-size:26px;

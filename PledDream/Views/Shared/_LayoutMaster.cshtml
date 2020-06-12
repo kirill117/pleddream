@@ -1,15 +1,24 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#sendBtn").click(function() {
-            SendOrder();
+        $("#sendBtn").click(function () {
+            var captcha = grecaptcha.getResponse();
+            if (captcha && captcha.length > 0) {
+                SendOrder();
+            }
+            else {
+                alert("Подтвердите что Вы не робот!");
+            }
         });
 
         $(".blog .date").click(function () {
-            var txt = $(this).parent().find("h4").html();
+            var txt = $(this).parent().find("h4").text();
             $("#message").val(txt);
         });
     });
@@ -113,6 +122,4 @@
     @RenderBody()
 </div>
                 
-
-
 <div id="dialogContainer" style="display:none;"></div>

@@ -12,5 +12,6 @@ namespace PledDream.Models
         public string name { get; set; }
         public string file { get; set; }
         public int amount { get; set; }
+        public bool isnew { get; set; }
     }
 }
